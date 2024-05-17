@@ -53,7 +53,7 @@ T3=real(beta*(T1-T2)+T1);
 
 sys_va=tf(k,conv([T1 1],[T2 1])); %funcion de transferencia W/Va
 
-[y_CHEN,t_CHEN,ent]=lsim(sys_va, u, t_D, [0,0]);
+[y_CHEN,t_CHEN,ent]=lsim(sys_va, ent_va, th, [0,0]);
 
 %Busco los valores despejando
 %los coeficientes de la funcion de tranferencia
